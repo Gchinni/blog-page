@@ -1,15 +1,39 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  DM_Sans,
+  Source_Code_Pro,
+  Poppins,
+  Port_Lligat_Sans,
+} from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// — DM Sans —
+const dmSans = DM_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "700"], // solo los pesos necesarios
+  variable: "--font-dm-sans", // nombre de la CSS var que quieres exponer
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// — Source Code Pro —
+const sourceCode = Source_Code_Pro({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-source-code",
+});
+
+// — Poppins —
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-poppins",
+});
+
+// — Port Lligat Sans —
+const portLligatSans = Port_Lligat_Sans({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-port-lligat-sans",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +49,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${dmSans.variable} ${sourceCode.variable} ${poppins.variable} ${portLligatSans.variable} antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
