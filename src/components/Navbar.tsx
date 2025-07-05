@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import NavLinks from "./NavLinks";
+import { BtnRegular } from "./BtnRegular";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,9 +18,9 @@ export default function Navbar() {
   return (
     <nav
       data-scrolled={scrolled} // ← atributo para Tailwind v4
-      className="
-        sticky top-0 z-50 flex items-center justify-between
-        py-4 px-[12.5%] transition-colors duration-300
+      className="sticky top-0 z-50 
+        flex items-center justify-between py-6 px-[12.5%] 
+        transition-colors duration-300
         data-[scrolled=true]:bg-card data-[scrolled=true]:shadow-md
         backdrop-blur-sm data-[scrolled=false]:backdrop-blur-0
       ">
@@ -28,8 +29,11 @@ export default function Navbar() {
           Mountain Blog
         </Link>
       </div>
-      <div className="flex space-x-12">
+      <div className="flex space-x-10 font-sans text-lg items-center">
         <NavLinks />
+        <div>
+          <BtnRegular label="Registrate" onClick={() => {}} />
+        </div>
       </div>
     </nav>
   );

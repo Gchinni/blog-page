@@ -28,9 +28,7 @@
 @layer components {
   /* nav-link = tu kit de estilos para enlaces del navbar  */
   .nav-link {
-    @apply font-sans
-          text-lg
-          transition-colors
+    @apply transition-colors
           duration-0
           hover:text-txt-secondary      /* color al pasar el mouse */
           decoration-2
@@ -38,9 +36,14 @@
           underline-offset-8;
   }
 
-  /* si quieres la versión “activa” del enlace */
   .nav-link-active {
     @apply underline decoration-2 decoration-primary underline-offset-8;
+  }
+
+  .btn-regular {
+    @apply bg-primary text-background py-2 px-5 rounded-2xl 
+      hover:bg-primary/80 transition-colors duration-200 
+      shadow-md shadow-primary/40;
   }
 }
 /* @media (prefers-color-scheme: dark) {
@@ -53,5 +56,5 @@
 body {
   background: var(--background);
   color: var(--txt-primary);
-  font-family: var(--font-dm-sans), sans-serif;
+  font-family: var(--font-dm-sans);
 }

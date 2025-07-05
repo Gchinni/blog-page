@@ -1,14 +1,29 @@
-// import Image from "next/image";
+import Image from "next/image";
+import { BtnRegularHero } from "@/components/BtnRegular";
 
 export default function Home() {
   return (
     <div className="px-[12.5%]">
-      <header className="h-screen bg-amber-200">
-        <div className="flex flex-col justify-center font-sans text-left bg-purple-50">
-          <h2>Donde tus palabras importan</h2>
-          <p>Publica, conecta e inspira desde cualquier lugar</p>
+      <header className="h-[100vh] flex items-center justify-left">
+        <Image
+          className="absolute bottom-[-130] right-0 object-cover w-[75%]"
+          src="/hero-image.svg"
+          alt="Background image"
+          width={1486}
+          height={750}
+        />
+        <div className="flex flex-col justify-center text-left gap-5 w-[50%] mb-50 z-10">
+          <h1 className="text-6xl">Donde tus palabras importan</h1>
+          <p className="text-1xl">
+            Publica, conecta e inspira desde cualquier lugar
+          </p>
+          <div className="flex with-full justify-start text-2xl">
+            <BtnRegularHero />
+          </div>
         </div>
       </header>
+
+      {/* Falta agregar contenido de pagina */}
     </div>
 
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
