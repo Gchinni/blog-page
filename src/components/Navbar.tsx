@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="flex space-x-10 font-sans text-lg items-center">
         <NavLinks />
         <div>
-          <BtnRegular label="Registrate" onClick={() => {}} />
+          <BtnRegular label="Empezar" onClick={() => {}} />
         </div>
       </div>
     </nav>
