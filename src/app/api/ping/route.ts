@@ -1,6 +1,6 @@
 // app/api/ping/route.ts
 import { NextResponse } from "next/server";
-import { connectMongo } from "@/querys/mongoose";
+import { connectMongo } from "@/lib/mongoose";
 
 export async function GET() {
   const db = (await connectMongo()).connection.db!;
